@@ -1,0 +1,37 @@
+[project]
+name = "dep_test"
+description = ""
+authors = [
+    { name = "Daniel Roseman", email = "daniel@roseman.org.uk"}
+]
+version = "0.1.0"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Private :: Do Not Upload",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "transformers>=4.27.3,<4.28.0",
+    "google-cloud-aiplatform",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pip-tools",
+    "build",
+    "ipython",
+]
+test = [
+    "pytest",
+]
+
+[build-system]
+requires = [
+    "setuptools>=67,<68",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
